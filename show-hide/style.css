@@ -1,0 +1,82 @@
+body{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(pics/drag.jpg);
+    background-size: cover;
+ 
+}
+
+.Container{
+   
+
+    color: whitesmoke;
+    background-color: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+   
+    width: min-content;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    transition: all 0.3s ease;
+}
+
+.show{
+    height: 30px;
+    width: 100px;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.show:hover{
+    background-color: white;
+    color: black;
+}
+
+.show:active{
+    background-color: rgba(255, 255, 255,0.4);
+    color: black;
+}
+
+.content{
+    animation: drop 1s;
+    height: 30px;
+    width: 100px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: rgba(0, 0, 0,0.6);;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    width: 300px;
+    display: none;
+    transition: all 0.3s ease   ;
+}
+
+@keyframes drop {
+    from {position: relative; top:-40px;opacity: 0;}
+    to {position: relative; top :0px;opacity: 1;}
+  }
