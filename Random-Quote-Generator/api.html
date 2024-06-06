@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <style>
+      body{
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      main{
+       
+        width: 1000px;
+        min-height: 400px;
+        border: 2px solid whitesmoke;
+        border-radius: 20px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 30px;
+        flex-direction: column;
+        gap: 60px
+        ;
+      }
+      .author{
+        border: 2px solid whitesmoke;
+        width: 80%;
+        height: 20%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        color: white;
+      }
+      .content{
+        border: 1px solid whitesmoke;
+      
+        width: 80%;
+        height: 60%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        color: white;
+        padding: 20px;
+        padding: 30px;
+      }
+      .button{
+        width: 270px;
+        height: 100px;
+        font-size: 30px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid whitesmoke;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        border-radius: 20px;
+        font-size: 56px;
+        border: 2px solid aqua;
+        cursor: pointer;
+        box-shadow: 0 0 8px aqua;
+        text-decoration: dotted;
+        color: aquamarine;
+      }
+    </style>
+</head>
+<body>
+ 
+ 
+    <main>
+      <div class="author" id="author"></div>
+      <div class="content"></div>
+    
+    </main>
+    <div class="button">Genrate</div>
+<script src="script.js"></script>
+</body>
+</html>
