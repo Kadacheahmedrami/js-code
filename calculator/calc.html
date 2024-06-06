@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <style>
+      body{
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      main{
+       
+        width: 400px;
+      
+        border: 2px solid whitesmoke;
+        border-radius: 20px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 20px;
+        flex-direction: column;
+        gap: 40px
+        ;
+        box-shadow: 0 0 16px aliceblue;
+      }
+      .display{
+        border: 2px solid whitesmoke;
+        width: 100%;
+        height: 140px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        color: white;
+        background-color: transparent
+      
+      }
+      .calc{
+        width: 270px;
+        height: 100px;
+        font-size: 30px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid whitesmoke;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+      .calc:hover {
+        border-radius: 20px;
+        font-size: 56px;
+        border: 2px solid aqua;
+        cursor: pointer;
+        box-shadow: 0 0 8px aqua;
+        text-decoration: dotted;
+        color: aquamarine;
+      }
+      .row{
+        display: flex;
+        flex-direction: row;
+        justify-self: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .butt{
+        border: 2px solid white;
+        height: 80px;
+        width: 80px;
+        border-radius: 35px;
+        font-size: 50px;
+        color: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .butt:hover{
+        box-shadow: 0 0 32px aqua;
+        color: aquamarine;
+        border: 2px solid aquamarine;
+      }
+      #equ:hover{
+        box-shadow: 0 0 32px gold;
+        color: gold;
+        border: 2px solid gold;
+      }
+      #C:hover{
+        box-shadow: 0 0 32px red;
+        color: red;
+        border: 2px solid red;
+      }
+    </style>
+</head>
+<body>
+ 
+ 
+    <main>
+      <input class="display" id="display">
+
+      <div class="buttons">
+        <div class="row">
+          <div class="butt">(</div>
+          <div class="butt">)</div>
+          <div class="butt" id="C">C</div>
+          <div class="butt" id="C">AC</div>
+        </div>
+      </div>
+
+
+        <div class="row">
+          <div class="butt">7</div>
+          <div class="butt">8</div>
+          <div class="butt">9</div>
+          <div class="butt">*</div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <div class="row">
+          <div class="butt">4</div>
+          <div class="butt">5</div>
+          <div class="butt">6</div>
+          <div class="butt">-</div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <div class="row">
+          <div class="butt">1</div>
+          <div class="butt">2</div>
+          <div class="butt">3</div>
+          <div class="butt">+</div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <div class="row">
+          <div class="butt">0</div>
+          <div class="butt">.</div>
+          <div class="butt">/</div>
+          <div class="butt" id="equ">=</div>
+        </div>
+      </div>
+    
+    </main>
+
+<script src="script.js"></script>
+</body>
+</html>
