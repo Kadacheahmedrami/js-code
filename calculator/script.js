@@ -1,18 +1,22 @@
 
 
 let display = document.getElementById("display");
+
 var pattern =/^[0-9+\-*/().\s]+$/;  
 document.querySelectorAll('.butt').forEach(element=> {
     element.addEventListener("click",function(){    
-
+        
         if(element.innerText == "=")
         {
-            if (pattern.test(display.innerText))
+            if (pattern.test(display.value))
             {
-                display.innerText = eval(display.innerText);
+                display.value = eval(display.value);
+            
+                
             }
+
             else{
-                display.innerText = "error"
+                display.value = "error"
             }
            
          
@@ -21,16 +25,16 @@ document.querySelectorAll('.butt').forEach(element=> {
 
             if(element.innerText != "C" && element.innerText != "AC" )
             {
-                display.innerText=  display.innerText + element.innerText
+                display.value=  display.value + element.innerText
                 
             }
             else{
                 if( element.innerText == "C")
                 {
-                    display.innerText = display.innerText.slice(0, -1);
+                    display.value = display.value.slice(0, -1);
                 }
                 else{
-                    display.innerText= "";
+                    display.value= "";
                 }
             }
 
@@ -41,3 +45,18 @@ document.querySelectorAll('.butt').forEach(element=> {
     })
 
 })
+
+display.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        if (pattern.test(display.value))
+        {
+            display.value = eval(display.value);
+        
+            
+        }
+
+        else{
+            display.value = "error"
+        }
+    }
+});
